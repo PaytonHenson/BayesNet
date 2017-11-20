@@ -9,8 +9,8 @@
     (setf (get 'c 'instantiated) nil)
     (setf (get 'c 'cpt) (make-array '(2 2) :initial-contents '((0.5 0.5) (0.25 0.75))))
     (setf (get 'c 'probs) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
-    (setf (get 'c 'lambda-values) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
-    (setf (get 'c 'lambda-messages) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
+    (setf (get 'c 'lambda-values) (make-array '2 :element-type 'double-float :initial-contents '(1 1)))
+    (setf (get 'c 'lambda-messages) (make-array '2 :element-type 'double-float :initial-contents '(1 1)))
     (setf (get 'c 'pi-values) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
     (setf (get 'c 'pi-messages) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
     ;;setup node d
@@ -19,7 +19,7 @@
     (setf (get 'd 'instantiated) t)
     (setf (get 'd 'cpt) (make-array '2 :initial-contents '(0.9 0.1)))
     (setf (get 'd 'probs) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
-    (setf (get 'd 'lambda-values) (make-array '2 :element-type 'double-float :initial-element 0.0d0))
+    (setf (get 'd 'lambda-values) (make-array '2 :element-type 'double-float :initial-contents '(1 1)))
     (setf (get 'd 'pi-values) (make-array '2 :element-type 'double-float :initial-contents 0.0d0))
     (operative-formula-5 'd)))
 
